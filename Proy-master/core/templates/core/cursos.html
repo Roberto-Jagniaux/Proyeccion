@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+
+{%load static%}
+{% block content %}
+{% endblock %}
+{% block content1 %}
+
+  <body class="sub_page">
+      <div class="d-flex flex-column align-items-end">
+        <div class="custom_heading-container">
+          <hr>
+          <h2>
+            CURSOS ENSEÑANZA MEDIA Y BASICA 2024
+          </h2>
+        </div>
+        <p>
+
+        </p>
+      </div>
+      <div class="container">
+        <div class="row">
+            {% for x in cursos_u %}
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ x.image.url }}" alt="Card image cap" style="width: 100%; height: 350px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ x.nomC }}</h5>
+                            <p class="card-text">{{ x.desC|linebreaks }}</p>
+                            <p class="card-text">Modalidad: {{ x.modC }}</p>
+                            <p class="card-text">Fecha Inicio: {{ x.fechaI }}</p>
+                            <p class="card-text">Fecha Termino: {{ x.fechaT }}</p>
+                            <button>
+                            <a href="/contact" class="slider-link">
+                                MATRICULA
+                              </a>
+                            </button>
+
+
+                        </div>
+                        
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <span class="current">
+          Pag {{ cursos_u.number }} de {{ cursos_u.paginator.num_pages }}.
+      </span>
+      <ul class="pagination">
+          {% if cursos_u.has_previous %}
+              <li class="page-item"><a class="page-link" href="?page=1">Primera</a></li> 
+              <li class="page-item"><a class="page-link" href="?page={{ cursos_u.previous_page_number }}">Previa</a></li>
+          {% endif %}
+          {% if cursos_u.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ cursos_u.next_page_number }}">Siguiente</a></li>
+              <li class="page-item"><a class="page-link" href="?page={{ cursos_u.paginator.num_pages }}">Ultima</a></li>
+          {% endif %}
+      </ul>
+  </nav>
+  
+    
+  {% endblock %}

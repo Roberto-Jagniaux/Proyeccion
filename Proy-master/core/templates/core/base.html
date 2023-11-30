@@ -1,0 +1,183 @@
+{%load static%}
+{% block content %}{% endblock %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>PROYECCION</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'img/logopro.jpeg' %}" alt="Logo">
+            <span>
+              PROYECCIÓN
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">Sobre nosotros </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/cursos"> Cursos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Matrícula</a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="quote_btn-container  d-flex justify-content-center">
+              <a href="">
+                <img src="{% static 'img/call.png' %}" alt="">
+                FONO : +56974169021
+              </a>
+              <a href="">
+                <span>
+                  @
+                </span>
+                PROYECCION@GMAIL.COM
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    {% block content1 %}
+    <section class=" slider_section position-relative">
+
+      <div class="slider_bg-container">
+
+      </div>
+      <div class="slider-container">
+
+        <div class="detail-box">
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="sr-only">Previa</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="sr-only">Siguiente</span>
+          </a>
+          <h1>
+            ¡BIENVENIDO <br>
+            A NUESTRA PLATAFORMA<br>
+            PROYECCIÓN!
+          </h1>
+          <p>
+            Bienvenidos a Proyección, una institución dedicada a impulsar el progreso educativo y brindar 
+            oportunidades a aquellos que buscan completar su educación básica o media. A través de nuestro
+             proyecto nos comprometemos a facilitar el acceso a la enseñanza mediante una plataforma educativa
+              integral
+          </p>
+          <div>
+            <a href="/contact" class="slider-link">
+              CONTACTANOS
+            </a>
+          </div>
+        </div>
+        <div class="img-box">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'img/clases1.png' %}" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/clases2.png' %}" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/clases3.jpeg' %}" alt="">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+  {% endblock %}
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_social">
+        <div>
+          <a href="https://www.instagram.com/inacap_concepcion_talcahuano/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
+            <img src="{% static 'img/fb.png' %}" alt="">
+          </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/inacap_concepcion_talcahuano/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
+              <img src="{% static 'img/insta.png' %}" alt="">
+            </a>
+          
+        </div>
+      </div>
+      <div>
+        <p>
+          TELEFONO: +56974169021
+          <br>
+          CORREO: PROYECCION@GMAIL.COM
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+
+  <!-- footer section -->
+
+
+
+
+</body>
+</body>
+
+</html>
+

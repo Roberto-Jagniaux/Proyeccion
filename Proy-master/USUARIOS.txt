@@ -1,0 +1,10 @@
+Superadmin:
+usuario:root
+clave:root
+
+Usuario con permisos solo de cursos:
+usuario:ccrk17
+clave:usuario1
+
+
+comando para crear usuario en consola: create_users

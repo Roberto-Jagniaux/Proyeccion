@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% block content %}{% endblock %}
+{%load static%}
+  {% block content1 %}
+  <body class="sub_page">
+  <!-- about section -->
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h6>
+              Acerca de nosotros
+            </h6>
+            <div class="custom_heading-container">
+              <h2>
+                PROYECCIÓN
+              </h2>
+              <hr>
+            </div>
+            <p>
+              Bienvenidos a Proyección, una institución dedicada a impulsar el progreso educativo y brindar oportunidades a 
+              aquellos que buscan completar su educación básica o media. A través de nuestro proyecto nos comprometemos a facilitar
+               el acceso a la enseñanza mediante una plataforma educativa integral.
+               <BR>
+               <H2>Misión:</H2> 
+               En Proyección, nuestra misión es poder guiar a aquellos que buscan completar su educación básica o media. Nos 
+               comprometemos a proporcionar una plataforma accesible que permita a cada individuo alcanzar sus metas académicas,
+                eliminando barreras educativas y fomentando el aprendizaje continuo.
+                <BR>
+                  <BR>
+                  <H2>Visión:</H2> 
+                  En Proyección, visualizamos un futuro donde la educación sea accesible para todos, independientemente de su origen 
+                  o circunstancias. Construyendo una comunidad comprometida con el progreso, la inclusión y el empoderamiento a través 
+                  del conocimiento.
+            </p>
+          
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'img/about-img.png' %}" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+
+
+
+</html>{% endblock %}

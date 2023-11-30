@@ -1,0 +1,143 @@
+{% extends 'core/base.html' %}
+
+{%load static%}
+{% block content %}
+{% endblock %}
+
+
+{% block content1 %}
+  <body class="sub_page">
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="d-flex flex-column align-items-end">
+        <div class="custom_heading-container">
+          <hr>
+          <h2>
+            PROCESO DE MATRÍCULA
+          </h2>
+        </div>
+      </div>
+      <div class="layout_padding-top layout_padding2-bottom">
+        <div class="row">
+          <div class="col-md-7">
+            <form action="">
+              <div class="contact_form-container">
+                <div>
+                  <div>
+                    <input type="text" placeholder="Nombre completo">
+                  </div>
+                  <div>
+                    <input type="email" placeholder="Correo">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Telefono">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Rut">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Fecha de nacimiento">
+                  </div>
+                  <div class="drop-area" id="dropArea" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                    <p>Arrastra y suelta archivos de documentos para matrícula 2024 indicados mas abajo</p>
+                    <input type="file" id="fileInput" multiple onchange="handleFiles(this.files)">
+                    <div id="fileList"></div>
+                  </div>
+                  
+                  <div class="">
+                    <input type="text" placeholder="Mensaje" class="message_input">
+                  </div>
+                  <div class="mt-5">
+                    <button type="submit">
+                      enviar
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+          
+          <div class="col-md-5">
+            <div class="map-box">
+              <div id="map">
+                <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.384008550171!2d-73.0547705241601!3d-36.83327827223772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b5d788cfb29b%3A0xb28bb706363c520e!2zQW5nb2wgNDcsIDQwNzAzMTIgQ29uY2VwY2nDs24sIELDrW8gQsOtbw!5e0!3m2!1ses!2scl!4v1701033315995!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2><br>
+            DOCUMENTOS OBLIGATORIOS PARA MATRÍCULA 2024</h2>
+
+          <p>
+            – CERTIFICADO DE NACIMIENTO para Matrícula (es gratuito y se obtiene de la página 
+            <a href="https://www.registrocivil.cl/principal/servicios-en-linea" target="_blank">Registro Civil</a>)
+          </p>
+          
+          <p>
+            – CERTIFICADO ANUAL DE ESTUDIOS (que aprobó el curso).
+          </p>
+          <br>
+          <ul>
+            <li>Para 5° Básico: El Certificado Anual de Estudios de 4° Básico.</li>
+            <li>Para 6° Básico: El Certificado Anual de Estudios de 5° Básico.</li>
+            <li>Para 7° Básico: El Certificado Anual de Estudios de 6° Básico.</li>
+            <li>Para 8° Básico: El Certificado Anual de Estudios de 7° Básico.</li>
+            <li>Para 1° Medio: El Certificado Anual de Estudios de 8° Básico.</li>
+            <li>Para 2° Medio: El Certificado Anual de Estudios de 1° Medio.</li>
+            <li>Para 3° Medio: Los Certificados Anuales de Estudios de 1° y 2° Medio.</li>
+            <li>Para 4° Medio: Los Certificados Anuales de Estudios de 1°, 2° y 3° Medio.</li>
+          </ul>
+          
+          <p>
+            Se obtiene de la página <a href="https://certificados.mineduc.cl/mvc/home/index" target="_blank">Certificados Mineduc</a>. 
+            Si no se encuentra en la plataforma por el motivo del año de egreso es anterior al año 2002, 
+            debe ingresar al link <a href="https://solicitud-certificados.mineduc.cl/solicitud-certificados/certificadoAnualEstudio" target="_blank">Solicitud de Certificados</a> 
+            debiendo completar todos los datos requeridos.
+          </p>
+          
+          <p>
+            – 2 fotos tamaño carnet.
+          </p>
+          
+          <p>
+            Más información escribir al correo <a href="mailto:PROYECCION@BIOBIO.cl">PROYECCION@GMAIL.COM</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+    
+
+  </section>
+</body>
+
+<script>
+  function dragOverHandler(event) {
+    event.preventDefault();
+    event.currentTarget.classList.add('dragging');
+  }
+
+  function dropHandler(event) {
+    event.preventDefault();
+    event.currentTarget.classList.remove('dragging');
+
+    const files = event.dataTransfer.files;
+    handleFiles(files);
+  }
+
+  function handleFiles(files) {
+    const fileList = document.getElementById('fileList');
+    fileList.innerHTML = '';
+
+    for (const file of files) {
+      const listItem = document.createElement('div');
+      listItem.textContent = file.name;
+      fileList.appendChild(listItem);
+    }
+  }
+</script>
+{% endblock %}
